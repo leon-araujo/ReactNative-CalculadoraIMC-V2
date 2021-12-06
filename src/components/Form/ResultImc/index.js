@@ -1,34 +1,12 @@
 import React from "react";
-import  { View, Text, StyleSheet} from 'react-native';
+import  { View, Text} from 'react-native';
+import styles from "./style";
 
 export default function ResultImc(props) {
     return (
-        <View style={estilo.resultImc}>
-            <Text style={estilo.information}>{props.messageResultImc}</Text>
-            <Text style={estilo.numberImc}>{props.resultImc}</Text>
+        <View style={styles.resultImc}>
+            <Text style={styles.information}>{props.messageResultImc}</Text>
+            <Text style={styles.numberImc}>{props.resultImc}</Text>
         </View>
     );
 }
-
-const estilo = StyleSheet.create({
-     resultImc: {
-        flex: 1,
-        marginTop: 15,
-        paddingTop: 60,
-        borderRadius: 50,
-        alignItems: 'center',
-        width: '100%',
-    }, 
-
-    numberImc: {
-        fontSize: 48,
-        color: '#ff0043',
-        fontWeight: 'bold'
-    },
-
-    information: {
-        fontSize: 18,
-        color: '#ff0043',
-        fontWeight: 'bold',
-    }
-})
